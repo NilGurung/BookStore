@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Publisher List</title>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
+
+    <script scr="http://cdn.jsdelivr.net/webjars/jquery/3.3.1-1/jquery.min.js" th:src="@{/webjars/jquery/3.3.1-1/jquery.min.js}"></script>
+
+    <link href="../static/css/spring-core.css" th:href="@{css/spring-core.css}" rel="stylesheet" media="screen" />
+</head>
+<body>
+<!--<div th:insert="~{index :: menu}" ></div>-->
+<div class="container">
+    <div th:if="${not #lists.isEmpty(publishers)}">
+        <h2>Publisher List</h2>
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone</th>
+            </tr>
+            <tr th:each="publisher : ${publishers}">
+                <td th:text="${publisher.id}"></td>
+                <td th:text="${publisher.name}"></td>
+                <td th:text="${publisher.address}"></td>
+                <td th:text="${publisher.phone}"></td>
+                <td><a href="/publisher/add">Add</a></td>
+                <td><a href="/publisher/edit">Edit</a></td>
+                <td><a href="/publisher/delete">Delete</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

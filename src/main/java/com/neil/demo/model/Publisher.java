@@ -15,8 +15,7 @@ public class Publisher {
     private String address;
     private Long phone;
 
-    @OneToOne
-    private Book books;
+
 
     public Publisher() {}
 
