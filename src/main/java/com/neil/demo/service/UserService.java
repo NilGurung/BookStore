@@ -1,7 +1,7 @@
 package com.neil.demo.service;
 
-import com.neil.demo.model.User;
-import com.neil.demo.model.security.UserRole;
+import com.neil.demo.domain.User;
+import com.neil.demo.domain.security.UserRole;
 
 import java.util.Set;
 

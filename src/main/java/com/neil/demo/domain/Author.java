@@ -1,4 +1,4 @@
-package com.neil.demo.model;
+package com.neil.demo.domain;
 
 import javax.persistence.*;
 import java.util.HashSet;

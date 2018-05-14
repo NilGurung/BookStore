@@ -1,6 +1,6 @@
 package com.neil.demo.repository;
 
-import com.neil.demo.model.User;
+import com.neil.demo.domain.User;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

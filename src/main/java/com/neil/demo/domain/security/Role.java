@@ -1,4 +1,4 @@
-package com.neil.demo.model.security;
+package com.neil.demo.domain.security;
 
 import javax.persistence.*;
 import java.io.Serializable;

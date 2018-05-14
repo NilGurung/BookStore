@@ -1,4 +1,4 @@
-package com.neil.demo.model.security;
+package com.neil.demo.domain.security;
 
 import org.springframework.security.core.GrantedAuthority;
 

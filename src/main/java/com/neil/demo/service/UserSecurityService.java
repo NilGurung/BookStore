@@ -1,6 +1,6 @@
 package com.neil.demo.service;
 
-import com.neil.demo.model.User;
+import com.neil.demo.domain.User;
 import com.neil.demo.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

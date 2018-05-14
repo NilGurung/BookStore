@@ -1,8 +1,8 @@
-package com.neil.demo.model;
+package com.neil.demo.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.neil.demo.model.security.Authority;
-import com.neil.demo.model.security.UserRole;
+import com.neil.demo.domain.security.Authority;
+import com.neil.demo.domain.security.UserRole;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

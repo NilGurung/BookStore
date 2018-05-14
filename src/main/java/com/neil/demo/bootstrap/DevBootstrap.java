@@ -1,8 +1,8 @@
 package com.neil.demo.bootstrap;
 
-import com.neil.demo.model.Author;
-import com.neil.demo.model.Book;
-import com.neil.demo.model.Publisher;
+import com.neil.demo.domain.Author;
+import com.neil.demo.domain.Book;
+import com.neil.demo.domain.Publisher;
 import com.neil.demo.repository.AuthorRepository;
 import com.neil.demo.repository.BookRepository;
 import com.neil.demo.repository.PublisherRepository;

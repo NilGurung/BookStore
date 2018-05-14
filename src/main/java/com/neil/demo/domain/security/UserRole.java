@@ -1,8 +1,8 @@
-package com.neil.demo.model.security;
+package com.neil.demo.domain.security;
 
 
 
-import com.neil.demo.model.User;
+import com.neil.demo.domain.User;
 
 import javax.persistence.*;
 import java.io.Serializable;

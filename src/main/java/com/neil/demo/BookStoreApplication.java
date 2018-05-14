@@ -1,15 +1,14 @@
 package com.neil.demo;
 
 import com.neil.demo.config.SecurityUtility;
-import com.neil.demo.model.User;
-import com.neil.demo.model.security.Role;
-import com.neil.demo.model.security.UserRole;
+import com.neil.demo.domain.User;
+import com.neil.demo.domain.security.Role;
+import com.neil.demo.domain.security.UserRole;
 import com.neil.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 import java.util.HashSet;
 import java.util.Set;

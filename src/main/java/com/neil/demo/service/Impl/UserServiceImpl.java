@@ -1,7 +1,7 @@
 package com.neil.demo.service.Impl;
 
-import com.neil.demo.model.User;
-import com.neil.demo.model.security.UserRole;
+import com.neil.demo.domain.User;
+import com.neil.demo.domain.security.UserRole;
 import com.neil.demo.repository.RoleRepository;
 import com.neil.demo.repository.UserRepository;
 import com.neil.demo.service.UserService;
