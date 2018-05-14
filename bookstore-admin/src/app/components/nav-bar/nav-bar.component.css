@@ -1,0 +1,51 @@
+.space {
+  flex: 1 1 auto;
+}
+
+.text-hide {
+  animation: hide 3s ease-out;
+}
+
+.text-show {
+  animation: show 3s ease-in;
+}
+
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0);
+  }
+}
+
+a.neil-menu {
+  margin: 5px;
+  padding: 5px;
+  font-size: 14px;
+}

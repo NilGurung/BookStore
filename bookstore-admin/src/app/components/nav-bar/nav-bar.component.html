@@ -1,0 +1,8 @@
+<mat-toolbar class="mat-warn">
+  <h3 [style.color]="white" >{{title}}</h3>
+  <span class="space"></span>
+  <span [hidden]="!loggedIn"><a  mat-button>View Book List</a></span>
+  <span [hidden]="!loggedIn"><a  mat-button routerLink="/book/add">Add a Book List</a></span>
+  <span [hidden]="!loggedIn"><a  mat-button (click)="logout()">Logout</a></span>
+</mat-toolbar>
+
