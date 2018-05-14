@@ -1,0 +1,153 @@
+<div class="container">
+    <div [hidden]="bookAdded">
+        <h3 style="margin-top: 30px">
+          New Book Information
+          <span style="font-size:small">* is a requred field</span>
+        </h3>
+
+      <form (ngSubmit)="onSubmit()" class="form">
+      <mat-grid-list cols="4" rowHeight="60px" >
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="full-width" >
+                <input matInput placeholder="Title" id="title" name="title" [(ngModel)]="newBook.title">
+            </mat-form-field>
+          </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Publisher" id="publisher" name="publisher"  [(ngModel)]="newBook.publisher">
+            </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="60px" >
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="author" id="author" name="author" [(ngModel)]="newBook.author">
+            </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Pasword" id="password" name="password"  [(ngModel)]="newBook.password">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="60px" >
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="publicationDate" id="publicationDate" name="publicationDate" [(ngModel)]="newBook.publicationDate">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="60px" >
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="full-width">
+              <mat-select placeholder="Cateogry" id="category" name="category" [ngModel]="newBook.category">
+
+                <mat-option value="management">Managemeent</mat-option>
+                <mat-option value="Fiction">Fiction</mat-option>
+                <mat-option value="Engineering">Engineering</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="full-width">
+              <mat-select placeholder="Format" id="format" name="format" [ngModel]="newBook.format">
+                <mat-option value="paperwork">Paperwork</mat-option>
+                <mat-option value="hardcover">HardCover</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="60px" >
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="pageNumber" type="number" name="numberOfpages" [(ngModel)]="newBook.numberOfpages">
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="ISBN" id="isbn" name="isbn"  [(ngModel)]="newBook.isbn">
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="60px"  >
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Price list" type="number" name="listPrice" [(ngModel)]="newBook.listPrice">
+            </mat-form-field>&nbsp;ounces&nbsp;
+          </mat-grid-tile>
+
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Our Price" type="Number" name="ourPrice" [(ngModel)]="newBook.ourPrice">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+
+        <mat-grid-list cols="4" rowHeight="60px" >
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Shipping Weight" name="Shipping Weight" [(ngModel)]="newBook.shippingWeight">
+            </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="full-width">
+              <mat-select placeholder="Language" id="language" name="language" [ngModel]="newBook.language">
+                <mat-option value="management">English</mat-option>
+                <mat-option value="Fiction">Spanish</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="60px" >
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Stock Number" type="number" name="inStockNumber" [(ngModel)]="newBook.inStockNumber">
+            </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+
+              &nbsp;
+              <mat-slide-toggle [color]="color" [checked]="checked" [disabled]="disabled" [ngModel]="newBook.active" name="active">Active</mat-slide-toggle>
+
+          </mat-grid-tile>
+        </mat-grid-list>
+
+
+
+                 <textarea matInput [(ngModel)]="newBook.description" name="description" id="description" cols="30" rows="10" placeholder="Description" required>
+                Description
+                </textarea>
+
+        <mat-grid-list cols="4" rowHeight="60px" >
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+             Image &nbsp;
+             <input id="book-image" type="file" id="bookImage" name="bookImage" (change)="uploadImageService.fileChangeEvent($event)" >
+          </mat-grid-tile>
+        </mat-grid-list>
+
+
+        <mat-grid-list cols="4" rowHeight="60px" >
+          <mat-grid-tile [colspan]="2" [rowspan]="1">
+              <button mat-raised-button type="submit" class="mat-primary">Add Book</button>
+              <button mat-raised-button type="submit" class="mat-warn cancel">Cancel</button>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </form>
+    </div>
+  <div class="row" [hidden]="!bookAdded">
+    <h3>Book Added Successfully</h3>
+  </div>
+</div>

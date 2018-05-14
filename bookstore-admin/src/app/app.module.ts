@@ -1,6 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatButtonModule, MatIconModule, MatMenuModule, MatToolbarModule, MatGridListModule, MatFormFieldModule} from "@angular/material";
+import {
+  MatButtonModule,
+  MatIconModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatGridListModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatSlideToggleModule
+} from "@angular/material";
 import {MatInputModule} from '@angular/material/input';
 
 
@@ -11,17 +20,21 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LoginComponent } from './login/login.component';
+import { AddNewBookComponent } from './components/add-new-book/add-new-book.component';
 
 import {LoginService} from "./services/login.service";
 import {HttpModule} from "@angular/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule} from "@angular/forms";
 
+import {AddBookService} from "./services/add-book.service";
+
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    LoginComponent
+    LoginComponent,
+    AddNewBookComponent
   ],
   imports: [
     BrowserModule,
@@ -35,13 +48,16 @@ import {FormsModule} from "@angular/forms";
     MatGridListModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatSelectModule,
+    MatSlideToggleModule
 
 
 
   ],
   providers: [
-    LoginService
+    LoginService,
+    AddBookService
   ],
   bootstrap: [AppComponent]
 })
