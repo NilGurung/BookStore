@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Iterator;
+import java.util.List;
 
 
 @RestController
@@ -55,5 +56,10 @@ public class BookApi {
                 e.printStackTrace();
                 return new ResponseEntity("Upload failed!", HttpStatus.BAD_REQUEST);
             }
+    }
+
+    @RequestMapping(value="/list")
+    public List<Book> addBookPost() {
+        return bookService.findAll();
     }
 }
