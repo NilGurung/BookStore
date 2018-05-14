@@ -29,7 +29,7 @@ export class AddNewBookComponent implements OnInit {
   onSubmit() {
     this.addBookService.sendBook(this.newBook).subscribe(
       res => {
-          this.uploadImageService.filesToUpload(JSON.parse(JSON.parse(JSON.stringify(result)._body)).id)
+          this.uploadImageService.uploadImage(JSON.parse(JSON.parse(JSON.stringify(res))._body).id)
           this.bookAdded = true;
           this.newBook = new Book();
       },

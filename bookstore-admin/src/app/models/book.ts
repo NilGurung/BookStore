@@ -4,7 +4,7 @@ export class Book {
     public author: string;
     public publisher: string;
     public publicationDate: string;
-    public language: strigng;
+    public language: string;
     public category: string;
     public numberOfpages: number;
     public format: string;

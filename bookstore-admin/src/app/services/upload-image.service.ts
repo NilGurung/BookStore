@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import any = jasmine.any;
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +14,10 @@ export class UploadImageService {
 
 
   uploadImage(bookId: number) {
-    this.makeFileRequest("http://localhost:8181/book/add/imag?id="+ bookId, [], this.filesToUpload).then(
-      console.log(result);
-    ),
-    (error) => {
+    this.makeFileRequest("http://localhost:8181/book/add/image?id="+ bookId, [], this.filesToUpload).then((result) =>
+        {
+            console.log(result);
+    },(error) => {
       console.log(error);
     });
 
@@ -45,7 +45,7 @@ export class UploadImageService {
         }
       }
       xhr.open("POST", url, true);
-      xhr.sendRequestHeader("x-auth-token", localStorage.getItem("xAuthToken"));
+      xhr.setRequestHeader("x-auth-token", localStorage.getItem("xAuthToken"));
       xhr.send(formData);
     });
   }
