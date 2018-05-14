@@ -14,11 +14,10 @@ export class AddBookService {
     let url = "http://localhost:8181/book/add";
 
     let headers = new Headers ({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
       'x-auth-token': localStorage.getItem('xAuthToken')
     })
 
-    localStorage.removeItem('xAuthToken');
 
     return this.http.post(url, JSON.stringify(book),  {headers: headers});
 
