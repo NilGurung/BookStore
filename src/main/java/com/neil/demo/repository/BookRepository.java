@@ -1,4 +1,4 @@
-package com.neil.demo.repositories;
+package com.neil.demo.repository;
 
 import com.neil.demo.model.Book;
 import org.springframework.data.repository.CrudRepository;

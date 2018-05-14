@@ -1,6 +1,6 @@
 package com.neil.demo.controller;
 
-import com.neil.demo.repositories.BookRepository;
+import com.neil.demo.repository.BookRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
