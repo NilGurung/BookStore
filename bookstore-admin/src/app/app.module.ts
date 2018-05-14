@@ -28,6 +28,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule} from "@angular/forms";
 
 import {AddBookService} from "./services/add-book.service";
+import {UploadImageService} from "./services/upload-image.service";
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import {AddBookService} from "./services/add-book.service";
   ],
   providers: [
     LoginService,
-    AddBookService
+    AddBookService,
+    UploadImageService
   ],
   bootstrap: [AppComponent]
 })
