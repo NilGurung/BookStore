@@ -29,13 +29,16 @@ import {FormsModule} from "@angular/forms";
 
 import {AddBookService} from "./services/add-book.service";
 import {UploadImageService} from "./services/upload-image.service";
+import { BookListComponent } from './components/book-list/book-list.component';
+import {GetBookListService} from "./services/get-book-list.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     LoginComponent,
-    AddNewBookComponent
+    AddNewBookComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,8 @@ import {UploadImageService} from "./services/upload-image.service";
   providers: [
     LoginService,
     AddBookService,
-    UploadImageService
+    UploadImageService,
+      GetBookListService
   ],
   bootstrap: [AppComponent]
 })
