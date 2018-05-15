@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers} from '@angular/http'
 import {Book} from '../models/book';
-import {GetBookService} from "./get-book.service";
-import {ActivatedRoute, Router} from "@angular/router";
+
 
 @Injectable({
   providedIn: 'root'
