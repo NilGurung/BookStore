@@ -8,7 +8,7 @@ import {
     MatGridListModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatSlideToggleModule, MatListModule
+    MatSlideToggleModule, MatListModule, MatDialogModule
 } from "@angular/material";
 import {MatInputModule} from '@angular/material/input';
 
@@ -29,10 +29,13 @@ import {FormsModule} from "@angular/forms";
 
 import {AddBookService} from "./services/add-book.service";
 import {UploadImageService} from "./services/upload-image.service";
-import { BookListComponent } from './components/book-list/book-list.component';
+import { BookListComponent, DialogResultExampleDialog } from './components/book-list/book-list.component';
 import {GetBookListService} from "./services/get-book-list.service";
 import { ViewBookComponent } from './components/view-book/view-book.component';
 import {GetBookService} from "./services/get-book.service";
+import { EditBookComponent } from './components/edit-book/edit-book.component';
+import {EditBookService} from "./services/edit-book.service";
+import {RemoveBookService} from "./services/remove-book.service";
 
 @NgModule({
   declarations: [
@@ -41,8 +44,12 @@ import {GetBookService} from "./services/get-book.service";
     LoginComponent,
     AddNewBookComponent,
     BookListComponent,
-    ViewBookComponent
+    ViewBookComponent,
+    EditBookComponent,
+    DialogResultExampleDialog
+
   ],
+    entryComponents: [DialogResultExampleDialog],
   imports: [
     BrowserModule,
     MatButtonModule,
@@ -58,7 +65,8 @@ import {GetBookService} from "./services/get-book.service";
     FormsModule,
     MatSelectModule,
     MatSlideToggleModule,
-      MatListModule
+      MatListModule,
+      MatDialogModule
 
 
 
@@ -69,6 +77,8 @@ import {GetBookService} from "./services/get-book.service";
     UploadImageService,
       GetBookListService,
       GetBookService,
+      EditBookService,
+      RemoveBookService
 
   ],
   bootstrap: [AppComponent]

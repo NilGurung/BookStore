@@ -10,7 +10,7 @@ import {Book} from "../../models/book";
 })
 export class ViewBookComponent implements OnInit {
   private bookId: Number;
-  private book: Book;
+  private book: Book = new Book();
 
   constructor(private getBookService: GetBookService, private route:ActivatedRoute, private router: Router) { }
 
@@ -21,12 +21,17 @@ export class ViewBookComponent implements OnInit {
 
     this.getBookService.getBook(this.bookId).subscribe(
         res => {
+
           this.book = res.json();
         },
         error => {
                 console.log(error);
         }
     )
+  }
+
+  onSelect(book: Book) {
+      this.router.navigate(['/book/edit',this.book.id]);
   }
 
 }
