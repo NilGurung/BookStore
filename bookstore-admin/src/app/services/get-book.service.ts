@@ -10,7 +10,7 @@ export class GetBookService {
   constructor(private http: Http) { }
 
     getBook(id : Number) {
-        let url = "http://localhost:8181/book/list";
+        let url = "http://localhost:8181/book/view/" + id;
 
         let headers = new Headers ({
             'Content-Type': 'application/json',
