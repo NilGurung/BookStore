@@ -7,12 +7,10 @@ Simple BookStore Application
 List of Screenshots of App:
 
 Login Section
-<img src="screenshots/login.png"  width="100" />
-
+![](screenshots/login.png )
 
 Add Book Section
-<img src="screenshots/add-book.png"  width="100" />
-
+![](screenshots/add-book.png)
 
 List Book Section
-<img src="screenshots/list-book.png"  width="100" />
+![](screenshots/list-book.png)
